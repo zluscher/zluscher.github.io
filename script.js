@@ -1,8 +1,6 @@
 /*
 MIT License
 
-Copyright (c) 2017 Pavel Dobryakov
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -237,15 +235,6 @@ function startGUI () {
     discord.domElement.parentElement.appendChild(discordIcon);
     discordIcon.className = 'icon discord';
 
-    let app = gui.add({ fun : () => {
-        ga('send', 'event', 'link button', 'app');
-        window.open('http://onelink.to/5b58bn');
-    } }, 'fun').name('Check out mobile app');
-    app.__li.className = 'cr function appBigFont';
-    app.__li.style.borderLeft = '3px solid #00FF7F';
-    let appIcon = document.createElement('span');
-    app.domElement.parentElement.appendChild(appIcon);
-    appIcon.className = 'icon app';
 
     if (isMobile())
         gui.close();
