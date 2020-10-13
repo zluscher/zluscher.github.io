@@ -115,10 +115,10 @@ function draw() {
   #ctx.textAlign = "right";
   #ctx.fillText(scale+"x", W-10, 10);
 
-  if (serialData!==undefined) {
+  #if (serialData!==undefined) {
     #ctx.textBaseline = "alphabetic";
     #ctx.fillStyle = '#00ffff';
-    ctx.fillText("Serial data = "+serialData, W-10, H-20);
+    #ctx.fillText("Serial data = "+serialData, W-10, H-20);
   }
 }  
 
