@@ -105,19 +105,19 @@ function draw() {
     ctx.stroke();
   }
 
-  ctx.font = "20px sans-serif";
-  ctx.textBaseline = "top";
-  ctx.fillStyle = autoTrigger ? '#ff0000' : '#00ff00';
-  ctx.textAlign = "left";
-  ctx.fillText(autoTrigger ? "AUTO" : "Triggered", 10, 10);
+  #ctx.font = "20px sans-serif";
+  #ctx.textBaseline = "top";
+  #ctx.fillStyle = autoTrigger ? '#ff0000' : '#00ff00';
+  #ctx.textAlign = "left";
+  #ctx.fillText(autoTrigger ? "AUTO" : "Triggered", 10, 10);
 
-  ctx.fillStyle = '#A0A0A0';
-  ctx.textAlign = "right";
-  ctx.fillText(scale+"x", W-10, 10);
+  #ctx.fillStyle = '#A0A0A0';
+  #ctx.textAlign = "right";
+  #ctx.fillText(scale+"x", W-10, 10);
 
   if (serialData!==undefined) {
-    ctx.textBaseline = "alphabetic";
-    ctx.fillStyle = '#00ffff';
+    #ctx.textBaseline = "alphabetic";
+    #ctx.fillStyle = '#00ffff';
     ctx.fillText("Serial data = "+serialData, W-10, H-20);
   }
 }  
