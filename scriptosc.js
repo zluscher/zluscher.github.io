@@ -1585,9 +1585,8 @@ canvas.addEventListener('touchmove', e => {
     for (let i = 0; i < touches.length; i++) {
         let pointer = pointers[i + 1];
         if (!pointer.down) continue;
-        let posX = getx(v);
-        let posY = gety(v);
-        pointer.down = true
+        let posX = getX(i);
+        let posY = getIy(interp[i]);
         updatePointerMoveData(pointer, posX, posY);
     }
 }, false);
