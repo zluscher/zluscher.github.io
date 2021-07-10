@@ -223,7 +223,6 @@ window.onresize = function() {
 };
 
 window.onload = function() {
-  window.onresize();
 
   startRecord();
 };
