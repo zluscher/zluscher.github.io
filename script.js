@@ -67,7 +67,7 @@ let pointers = [];
 let splatStack = [];
 pointers.push(new pointerPrototype());
 
-const { gl, ext } = getWebGLContext(canvas);
+// const { gl, ext } = getWebGLContext(canvas);
 
 if (isMobile()) {
     config.DYE_RESOLUTION = 512;
@@ -81,23 +81,23 @@ if (!ext.supportLinearFiltering) {
 
 startGUI();
 
-function getWebGLContext (canvas) {
-    const params = { alpha: true, depth: false, stencil: false, antialias: false, preserveDrawingBuffer: false };
+// function getWebGLContext (canvas) {
+//     const params = { alpha: true, depth: false, stencil: false, antialias: false, preserveDrawingBuffer: false };
 
-    let gl = canvas.getContext('webgl2', params);
-    const isWebGL2 = !!gl;
-    if (!isWebGL2)
-        gl = canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params);
+//     let gl = canvas.getContext('webgl2', params);
+//     const isWebGL2 = !!gl;
+//     if (!isWebGL2)
+//         gl = canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params);
 
-    let halfFloat;
-    let supportLinearFiltering;
-    if (isWebGL2) {
-        gl.getExtension('EXT_color_buffer_float');
-        supportLinearFiltering = gl.getExtension('OES_texture_float_linear');
-    } else {
-        halfFloat = gl.getExtension('OES_texture_half_float');
-        supportLinearFiltering = gl.getExtension('OES_texture_half_float_linear');
-    }
+//     let halfFloat;
+//     let supportLinearFiltering;
+//     if (isWebGL2) {
+//         gl.getExtension('EXT_color_buffer_float');
+//         supportLinearFiltering = gl.getExtension('OES_texture_float_linear');
+//     } else {
+//         halfFloat = gl.getExtension('OES_texture_half_float');
+//         supportLinearFiltering = gl.getExtension('OES_texture_half_float_linear');
+//     }
 
     gl.clearColor(0.0, 0.0, 0.0, 1.0);
 
