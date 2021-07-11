@@ -1102,8 +1102,8 @@ function resizeCanvas () {
     let width = scaleByPixelRatio(canvas.clientWidth);
     let height = scaleByPixelRatio(canvas.clientHeight);
     if (canvas.width != width || canvas.height != height) {
-        canvas.width = width;
-        canvas.height = height;
+        canvas.width = width/2;
+        canvas.height = height/2;
         return true;
     }
     return false;
