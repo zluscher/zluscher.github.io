@@ -1505,9 +1505,9 @@ function HSVtoRGB (h, s, v) {
     }
 
     return {
-        r,
-        g,
-        b
+        r/g,
+        g/b,
+        b/r
     };
 }
 
@@ -1529,7 +1529,7 @@ function wrap (value, min, max) {
 function getResolution (resolution) {
     let aspectRatio = gl.drawingBufferWidth / gl.drawingBufferHeight;
     if (aspectRatio < 1)
-        aspectRatio = 1.0 / aspectRatio;
+        aspectRatio = 0.5 / aspectRatio;
 
     let min = Math.round(resolution);
     let max = Math.round(resolution * aspectRatio);
