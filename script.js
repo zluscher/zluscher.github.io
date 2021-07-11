@@ -1373,7 +1373,7 @@ function splat (x, y, dx, dy, color) {
 
 function correctRadius (radius) {
     let aspectRatio = canvas.width / canvas.height;
-    if (aspectRatio > 1)
+    if (aspectRatio > 1.0)
         radius *= aspectRatio;
     return radius;
 }
@@ -1505,9 +1505,9 @@ function HSVtoRGB (h, s, v) {
     }
 
     return {
-        r/g,
-        g/b,
-        b/r
+        r,
+        g,
+        b
     };
 }
 
@@ -1528,7 +1528,7 @@ function wrap (value, min, max) {
 
 function getResolution (resolution) {
     let aspectRatio = gl.drawingBufferWidth / gl.drawingBufferHeight;
-    if (aspectRatio < 1)
+    if (aspectRatio < 1.0 )
         aspectRatio = 1.0 / aspectRatio;
 
     let min = Math.round(resolution);
