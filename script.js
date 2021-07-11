@@ -1481,7 +1481,7 @@ function getTextureScale (texture, width, height) {
 }
 
 function scaleByPixelRatio (input) {
-    let pixelRatio = 0.5;
+    let pixelRatio = 0.1;
     return Math.floor(input * pixelRatio);
 }
 
