@@ -94,16 +94,16 @@ function draw() {
   ctx.strokeStyle = '#ffffff';
   ctx.stroke();
 
-  // the interpreted line
-  if (state!==undefined) {
-    ctx.beginPath();
-    ctx.moveTo(getX(0),getIY(state));
-    for (var i=0; i<drawSamples.length; ++i) {
-      ctx.lineTo(getX(i), getIY(interp[i]));
-    }
-    ctx.strokeStyle = '#00ffff';
-    ctx.stroke();
-  }
+//   // the interpreted line
+//   if (state!==undefined) {
+//     ctx.beginPath();
+//     ctx.moveTo(getX(0),getIY(state));
+//     for (var i=0; i<drawSamples.length; ++i) {
+//       ctx.lineTo(getX(i), getIY(interp[i]));
+//     }
+//     ctx.strokeStyle = '#00ffff';
+//     ctx.stroke();
+//   }
 }  
 
 
