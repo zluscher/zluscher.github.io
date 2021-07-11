@@ -1529,7 +1529,7 @@ function wrap (value, min, max) {
 function getResolution (resolution) {
     let aspectRatio = gl.drawingBufferWidth / gl.drawingBufferHeight;
     if (aspectRatio < 1)
-        aspectRatio = 1 / aspectRatio;
+        aspectRatio = 1.0 / aspectRatio;
 
     let min = Math.round(resolution);
     let max = Math.round(resolution * aspectRatio);
