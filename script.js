@@ -1102,8 +1102,8 @@ function resizeCanvas () {
     let width = scaleByPixelRatio(canvas.clientWidth);
     let height = scaleByPixelRatio(canvas.clientHeight);
     if (canvas.width != width || canvas.height != height) {
-        canvas.width = width/2;
-        canvas.height = height/2;
+        canvas.width = width;
+        canvas.height = height;
         return true;
     }
     return false;
@@ -1548,7 +1548,7 @@ function getTextureScale (texture, width, height) {
 }
 
 function scaleByPixelRatio (input) {
-    let pixelRatio = window.devicePixelRatio || 1;
+    let pixelRatio = window.devicePixelRatio || 0.5;
     return Math.floor(input * pixelRatio);
 }
 
